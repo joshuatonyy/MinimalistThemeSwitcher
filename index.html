@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- NAVBAR -->
+        <nav>
+            <a onclick="return darkMode()" id="darkThemeButton">Dark</a>
+            <a onclick="return matrixMode()" id="matrixThemeButton">Matrix</a>
+        </nav>
+        <!-- NAVBAR END -->
+        <!-- CONTENT -->
+        <h1 id="welcomeText">Hi, welcome to reforestation</h1>
+        <img src="Untitled-2.png" id="reforestationLogo">
+        <!-- CONTENT END -->
+    </div>
+    <!-- POPUP -->
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <p>You are out of change theme token</p>
+            <button id="restart" onclick="return onRestart()">Restart</button>
+        </div>
+    </div>
+    <!-- POPUP END -->
+    <script src="func.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/source-code-pro.min.css");
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Code Pro';
+    background-color: white;
+    color: black;
+    -webkit-transition: background-color .7s;
+    transition: background-color .7s;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+    -webkit-transition: background-color .7s;
+    transition: background-color .7s;
+}
+
+.matrix {
+    background-color: #2d3036;
+    color: rgb(34 197 94);
+    -webkit-transition: background-color .7s;
+    transition: background-color .7s;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 30px;
+    width: 350px;
+    max-width: 100%;
+}
+
+
+
+nav {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    padding: 5px;
+}
+
+nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+#welcomeText {
+    margin-bottom: 0px;
+    animation: fadeInText 1.5s, ease-in-out 2.5s;
+    animation-fill-mode: forwards;
+}
+
+#reforestationLogo {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    animation: fadeInLogo 2.3s, ease-in-out 3.3s;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+        line-height: 200px;
+    }
+
+    50% {
+        transform: rotateX(0);
+        line-height: 25px;
+    }
+    
+    100% {
+        opacity: 1;
+        margin-bottom: 400px;
+    }
+}
+
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    
+    60% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
